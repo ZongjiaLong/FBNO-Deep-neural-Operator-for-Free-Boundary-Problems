@@ -34,6 +34,12 @@ tensorboard==2.17.1# not really necessary
 
 This software is distributed with the MIT license which translates roughly that you can use it however you want and for whatever reason you want. All the information regarding support, copyright and the license can be found in the LICENSE file.
 
+## Contact
+
+For further inquiries, additional information, or any form of assistance, please contact the corresponding author via email at niki177155@outlook.com. For prompt communication, direct correspondence may also be initiated by telephone at +86 18529113299.  
+
+
+
 ## Acknowledgement
 
 I appreciate the following github repos a lot for their valuable code base and datasets:
