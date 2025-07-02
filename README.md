@@ -36,7 +36,7 @@ This software is distributed with the MIT license which translates roughly that 
 
 ## Contact
 
-For further inquiries, additional information, or any form of assistance, please contact the corresponding author via email at niki177155@outlook.com. For prompt communication, direct correspondence may also be initiated by telephone at +86 18529113299.  
+For further inquiries, additional information, or any form of assistance, please contact the corresponding author via email at niki177155@outlook.com. 
 
 
 
