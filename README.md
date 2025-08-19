@@ -17,7 +17,6 @@ However I don't really recommend this approach, as I've worked on other projects
 
 ```python
 seaborn==0.13.2
-torch==1.9.0
 scipy==1.15.2
 matplotlib==3.9.0
 tqdm==4.66.5
