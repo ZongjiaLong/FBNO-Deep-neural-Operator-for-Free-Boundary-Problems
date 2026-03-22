@@ -36,7 +36,7 @@ test_path = ".\\all_test.npy"
 
 test_loader = create_dataloaders(test_path, batch_size=1,shuffle = False, max_samples=200)
 
-# 示例用法
+
 myloss = LpLoss(size_average=False)
 MSE_loss = torch.nn.HuberLoss()
 l2_loss = LpLoss(size_average=False)
