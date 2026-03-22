@@ -36,6 +36,5 @@ def load_supervise_data(batch_size=32,split_num = 0.2, data_path=None):
 
     train_dataset = GeneratedDataset(train_data)
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)  # 测试集不需要 shuffle
-
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False) 
     return  train_loader
