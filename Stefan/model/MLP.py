@@ -173,7 +173,6 @@ class MultiScaleFourierFeatureMapping(nn.Module):
         self.mapping_size = mapping_size
         self.num_scales = num_scales
 
-        # 初始化多个频率矩阵
         self.B_list = nn.ParameterList([
             nn.Parameter(torch.randn((input_dim, mapping_size)) * (2 ** i))
             for i in range(num_scales)
