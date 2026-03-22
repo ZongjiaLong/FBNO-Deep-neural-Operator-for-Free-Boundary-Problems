@@ -117,7 +117,7 @@ def plot_error_distributions(m, seed=420,alpha=0.5):
     plt.gca().set_yticks([])
     plt.gca().set_ylabel('')
     plt.tight_layout()
-    plt.savefig('。\\vl2.svg', bbox_inches='tight', transparent=True)
+    plt.savefig('.\\vl2.svg', bbox_inches='tight', transparent=True)
     plt.show()
 
 
@@ -473,12 +473,12 @@ def compare_efficiency_metrics(
 
 
 if __name__ == '__main__':
-    npz_file_path = r"D:\download\all_data_15000.npz"
+    npz_file_path = r"\all_data_15000.npz"
     seed = 42
     cache = DataLoaderCache()
     val_loader = cache.get_dataloaders(npz_file_path, batch_size=24, seed=seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    load_path = "D:\download\G_model.pth"
+    load_path = "\G_model.pth"
 
     # setup_seed(seed)
     # m = Model(embed_dim=128, device=device)
