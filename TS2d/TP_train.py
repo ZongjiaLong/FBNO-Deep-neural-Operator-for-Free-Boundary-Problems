@@ -96,19 +96,8 @@ def train(epoches, lr, embed_dim = 256,seed = 42, log=None,save_dir=None,load_pa
     else:
         avg_epoch_time = sum(epoch_times) / len(epoch_times)
 
-    # 打印训练时间统计
-    print("\n" + "=" * 50)
-    print("训练时间统计:")
-    print(f"总训练时间: {timedelta(seconds=int(total_time))}")
-    print(f"总epoch数: {epoches}")
-    print(f"平均每个epoch时间: {avg_epoch_time:.2f}秒")
-    print(f"最快epoch时间: {min(epoch_times):.2f}秒")
-    print(f"最慢epoch时间: {max(epoch_times):.2f}秒")
-    print(f"总数据加载/处理时间估算: {timedelta(seconds=int(total_time - sum(epoch_times)))}")
-    print("=" * 50)
-
+  
     if log is not None:
-        # 将时间统计也写入tensorboard
         writer.add_scalar('Time/total_training_time', total_time, 0)
         writer.add_scalar('Time/avg_epoch_time', avg_epoch_time, 0)
         writer.add_scalar('Time/min_epoch_time', min(epoch_times), 0)
@@ -132,7 +121,7 @@ if __name__ == '__main__':
 
     save_dir = './Checkpoint/'
     base_log_dir = ('/root/tf-logs/12_6TP')
-    load_path = "F:\\Tumour\\picture\\result\\s1\\pretrainmodel_posttrained.pth"
+    load_path = ".\\pretrainmodel_posttrained.pth"
     current_time = datetime.now().strftime("%m%d_%H%M%S")
     time_based_unique_id = f"{current_time}"
     log_dir = os.path.join(base_log_dir, "TP---" + time_based_unique_id)
