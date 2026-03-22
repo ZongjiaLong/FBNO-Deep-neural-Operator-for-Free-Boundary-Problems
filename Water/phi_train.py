@@ -116,17 +116,17 @@ def train(epoches, lr, embed_dim = 64,seed = 420, log=None,save_dir=None,load_pa
 
 
 if __name__ == '__main__':
-    max_data_path ="D:\\desktop\\iso_z_max.npz"
-    zero_data_path =  "D:\\desktop\\iso_z_zero.npz"
+    max_data_path ="\\iso_z_max.npz"
+    zero_data_path =  "\\iso_z_zero.npz"
     seed = 3407
     max_train_loader, max_val_loader = create_data_loaders(max_data_path, batch_size=500,shuffle=True,seed = seed)
     zero_train_loader, zero_val_loader = create_data_loaders(max_data_path, batch_size=500,shuffle=True,seed = seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-    save_dir = 'D:\desktop\BCO\checkpoint\water'
-    base_log_dir = ('D:\\desktop\\BCO\\tensorboard\\11_28')
-    load_path = "D:\desktop\BCO\checkpoint\water\phi_first_model.pth"
+    save_dir = '\water'
+    base_log_dir = ('\\11_28')
+    load_path = "\phi_first_model.pth"
     current_time = datetime.now().strftime("%m%d_%H%M%S")
     time_based_unique_id = f"{current_time}"
     log_dir = os.path.join(base_log_dir, "fx---" + time_based_unique_id)
