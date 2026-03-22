@@ -55,7 +55,7 @@ def compute_PDE_loss(rou0,u,t,T,rou,urou,x0 = None,phi = None,interior_source =N
 
     #(rho[j,i+1]-rho[j,i])/dt
     #(rho[j+1,i]*v[j+1,i] - rho[j,i]*v[j,i])/phi[j+1,i]-phi[j,i]
-    #(倒数第2）
+
 
     if interior_source is not None:
         lamda = 0.8 * 15
