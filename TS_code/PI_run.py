@@ -91,7 +91,7 @@ def heat_source(x, t,heat_para):
 
 def train(epoches, lr, embed_dim = 64, log=None,load_path =None,seed = 389260,save_dir=None):
     setup_seed(seed)
-    Heat_path = "D:\\desktop\\BCO\\checkpoint\\heat_model_new2\\heat_model.pth"
+    Heat_path = ".\\heat_model.pth"
     m = Model(embed_dim=embed_dim, Heat_path=Heat_path)
     if load_path:  # Check if a load path is provided
         try:
