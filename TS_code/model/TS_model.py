@@ -120,7 +120,7 @@ def expand_tensor(tensor, n):
   expanded_tensor = tensor.repeat_interleave(n, dim=0).reshape(batchsize, n, m)
   return expanded_tensor
 class Model(nn.Module):
-    def __init__(self, embed_dim,Heat_path= None,sensor_mesh = 128, lora0=False,lora1 = False):
+    def __init__(self, embed_dim,sensor_mesh = 128, lora0=False,lora1 = False):
         super(Model, self).__init__()
         self.embed_dim = embed_dim
         self.weight_initializer = WeightInitializer(init_type='xavier_normal')
