@@ -23,7 +23,6 @@ test_loader = create_dataloaders(test_path, batch_size=1,shuffle = False, max_sa
 
 
 
-# 示例用法
 myloss = LpLoss(size_average=False)
 MSE_loss = torch.nn.MSELoss()
 l2_loss = LpLoss(size_average=False)
