@@ -140,7 +140,6 @@ def vis_boundary_loss(test_loader, model_path,lablesize = 8,size=(2.65,2)):
     u_loss_values = np.array(u_loss_values)
     s_loss_values = np.array(s_loss_values)
 
-    # 创建画布
     plt.figure(figsize=size)
 
     sns.regplot(x=different_values, y=u_loss_values, scatter=False,
@@ -160,7 +159,6 @@ def vis_boundary_loss(test_loader, model_path,lablesize = 8,size=(2.65,2)):
     plt.tight_layout()
     plot_filename = os.path.join(output_path, 'loss_vs_different_domain.svg')
     plt.savefig(plot_filename, bbox_inches='tight')
-    # 保存图表
     plt.show()
 
 
