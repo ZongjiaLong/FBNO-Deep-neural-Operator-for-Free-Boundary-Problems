@@ -331,12 +331,12 @@ class SONL(nn.Module):
     def forward(self, x):
         device = x.device
         result = torch.where(x < -2,
-                             torch.tensor(-1.0, device=device),  # x < -2 时返回 -1
+                             torch.tensor(-1.0, device=device),  
                              torch.where(x < 0,
-                                         x + 0.25 * x ** 2,  # -2 <= x < 0 时返回 x + 0.25 * x**2
+                                         x + 0.25 * x ** 2,  
                                          torch.where(x < 2,
-                                                     x - 0.25 * x ** 2,  # 0 <= x < 2 时返回 x - 0.25 * x**2
-                                                     torch.tensor(1.0, device=device)  # x >= 2 时返回 1
+                                                     x - 0.25 * x ** 2,  
+                                                     torch.tensor(1.0, device=device)  
                                                      )
                                          )
                              )
@@ -465,21 +465,19 @@ class HardELiSH(nn.Module):
         super(HardELiSH, self).__init__()
 
     def forward(self, x):
-        # 计算max(0, min(1, 0.5*(x + 1)))
+  
         clamp_value = torch.clamp(0.5 * (x + 1), 0, 1)
 
-        # 根据x的符号选择不同的表达式
         positive_part = x * clamp_value
         negative_part = (torch.exp(x) - 1) * clamp_value
 
-        # 使用torch.where来选择不同的表达式
         return torch.where(x >= 0, positive_part, negative_part)
 
 class Serf(nn.Module):
     def forward(self, x):
         log_exp_x = torch.log(1 + torch.exp(x))
         erf_log_exp_x = torch.erf(log_exp_x)
-        # 返回 x * erf(ln(1 + exp(x)))
+
         return x * erf_log_exp_x
 
 class FReLU(nn.Module):
@@ -756,7 +754,7 @@ class NormLinComb(nn.Module):
         self.weight_elu = nn.Parameter(torch.tensor([0.5], requires_grad=True))
 
     def forward(self, x):
-        # 计算每个激活函数的结果
+    
         relu_output = F.relu(x)
         tanh_output = torch.tanh(x)
         elu_output = F.elu(x)
