@@ -133,7 +133,7 @@ def plot_error_distributions(m,seed = 420, load_path=None):
     plt.gca().set_yticks([])
     plt.gca().set_ylabel('')
     plt.tight_layout()
-    plt.savefig('D:\\desktop\\Water_vis\\hl1.svg', bbox_inches='tight', transparent=True)
+    plt.savefig('.\\hl1.svg', bbox_inches='tight', transparent=True)
     plt.show()
 
 
@@ -512,21 +512,21 @@ def plot_efficiency_metrics(results: Dict[str, Any], save_path: str = None):
     plt.show()
 
 if __name__ == '__main__':
-    npz_file_path = r"D:\desktop\iso_npz.npz"
+    npz_file_path = r"\iso_npz.npz"
     seed = 58
     train_loader, val_loader = create_data_loaders(npz_file_path, batch_size=10,seed = seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    load_path = "D:\\desktop\\BCO\\checkpoint\\water\\500581205_210601\\H_model.pth"
+    load_path = "\\H_model.pth"
 
     # plot_error_distributions( embed_dim=256, load_path=load_path,seed=seed)
     # setup_seed(seed)
-    # m = Model(embed_dim=256, device=device,phi_model_path="D:\desktop\BCO\checkpoint\water\phi_first_model.pth")
+    # m = Model(embed_dim=256, device=device,phi_model_path="\phi_first_model.pth")
     # m.load_state_dict(torch.load(load_path))
     # m = m.to('cuda')
 
     setup_seed(seed)
-    m = Model(embed_dim=256, device=device, phi_model_path="D:\desktop\BCO\checkpoint\water\phi_first_model.pth")
+    m = Model(embed_dim=256, device=device, phi_model_path="\phi_first_model.pth")
     m.load_state_dict(torch.load(load_path))
     m = m.to('cuda')
 
