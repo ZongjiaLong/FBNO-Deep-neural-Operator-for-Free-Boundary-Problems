@@ -57,7 +57,7 @@ def collate_fn(batch):
 
         padded_inputs.append(padded_input.unsqueeze(1))
 
-    # 填充目标数据
+ 
     padded_targets = []
     for target_data in target_list:
         current_length = target_data.shape[0]
@@ -70,7 +70,6 @@ def collate_fn(batch):
 
         padded_targets.append(padded_target)
 
-    # 堆叠成张量
     input_tensor = torch.stack(padded_inputs)
     target_tensor = torch.stack(padded_targets)
 
