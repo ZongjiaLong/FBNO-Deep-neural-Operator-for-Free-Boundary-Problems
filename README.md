@@ -3,7 +3,7 @@ This is the code of the Deep neural Operator for Free Boundary Problems
 
 ## Data
 
-All the data is available on Zenodo at [data](https://doi.org/10.5281/zenodo.15779011). In fact, since I'm not very good at using other scientific drawing tools, all the images for the paper were done using python drawing and text annotation on draw.io.In other words, all the original images can be generated from data and code.
+All the data is available on Zenodo at [data](https://doi.org/10.5281/zenodo.15779011). 
 
 ## Environment
 
