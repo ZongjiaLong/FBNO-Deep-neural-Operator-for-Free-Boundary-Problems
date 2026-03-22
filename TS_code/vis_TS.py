@@ -767,17 +767,15 @@ def vis_mass_dis(test_loader, load_path=None):
     plt.show()
 
 if __name__ == '__main__':
-    test_data_path = "D:\desktop\FBNO_data\TS_data\zero_shoot.npy"
-    # test_data_path ="D:\\desktop\\FBNO_data\\TS_data\\test_200.npy"
+    test_data_path = ".\zero_shoot.npy"
+    # test_data_path =".\\test_200.npy"
 
     test_loader = load_supervise_data(batch_size=1, data_path=test_data_path, split_num=200)
-    load_path = "D:\desktop\FBNO_data\TS_data\PI_model.pth"
+    load_path = ".\PI_model.pth"
 
     # vis(test_loader,load_path=load_path,size = (6,5),labelsize = 5)
-    # vis_mass_dis11(test_loader, load_path)
-    # vis_mass_dislinf(test_loader, load_path)
+
     # vis_time_dis(test_loader, load_path)
-    # save_smoothed_errors(test_loader, load_path,output_txt_path)
     # vis_dis(test_loader, load_path,size = (8,8),labelsize = 6)
 
     # results = vis_mass_multi_errors(test_loader, load_path)
