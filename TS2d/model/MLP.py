@@ -223,7 +223,6 @@ class AdaptiveFourierFeatureMapping(nn.Module):
         self.mapping_size = mapping_size
         self.scale = scale
 
-        # 将频率矩阵 B 设置为可学习参数
         self.B = nn.Parameter(torch.randn((input_dim, mapping_size)) * scale)
 
     def forward(self, x):
