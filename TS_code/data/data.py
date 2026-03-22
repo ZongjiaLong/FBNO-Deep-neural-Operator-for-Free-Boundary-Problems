@@ -114,7 +114,7 @@ def generate_data(
     boundary_left_rou0 = func(x=boundary_left_T,A=expan_A,B=expan_B,C=expan_C)
     boundary_right_rou0 = func(x=boundary_right_T,A=expan_A,B=expan_B,C=expan_C)
 
-    # 生成初始点 (t = 0)
+
 
     x_initial = torch.rand(n_s,n_initial, device=device) * L
     t_initial = torch.zeros(n_s,n_initial, device=device)
