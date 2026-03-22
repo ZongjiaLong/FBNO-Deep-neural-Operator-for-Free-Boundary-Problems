@@ -34,11 +34,11 @@ class AdaptiveLROptimizer(Optimizer):
                 if param.grad is None:
                     continue
 
-                grad1 = param.grad1  # 第一个损失的梯度
-                grad2 = param.grad2  # 第二个损失的梯度
+                grad1 = param.grad1 
+                grad2 = param.grad2 
 
                 if grad1 is None or grad2 is None:
-                    raise ValueError("需要先计算两个损失的梯度并保存到 param.grad1 和 param.grad2。")
+                    raise ValueError("you need to get param.grad1 and param.grad2 first")
 
                 sim = cosine_similarity(grad1.view(1, -1), grad2.view(1, -1)).item()
 
@@ -401,7 +401,7 @@ class MultiAdam(Optimizer):
 #     lr=1e-3,
 #     betas=(0.9, 0.999),
 #     param_scheduler=param_scheduler,
-#     loss_group_idx=[1],  # 前1个损失是一个组，剩下的一个损失是另一个组
+#     loss_group_idx=[1],  
 # )
 # input = torch.randn(32, 10)
 # target1 = torch.randn(32, 5)
@@ -420,7 +420,6 @@ class MultiAdam(Optimizer):
 #
 #     losses = optimizer.step(closure)
 #
-#     # 获取当前的学习率、贝塔参数和组权重
 #     current_lr = optimizer.param_scheduler.lr()
 #     current_betas = optimizer.param_scheduler.betas()
 #     current_group_weights = optimizer.param_scheduler.group_weights()
