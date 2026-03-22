@@ -19,7 +19,6 @@ def compute_ntk(model, x):
     ntk = torch.mm(grads, grads.t())
     return ntk
 
-# 自适应调整损失权重
 def adaptive_loss_weighting(ntk, mse_loss, physics_loss):
     eigenvalues = torch.linalg.eigvalsh(ntk)
     lambda_mse = 1.0 / eigenvalues[0]
@@ -37,13 +36,13 @@ def count_params(model):
             c += reduce(operator.mul, size, 1)
     return c
 def get_n_params(model):
-    pp = 0  # pp 代表总参数数量
+    pp = 0  
     for p in list(model.parameters()):
         nn = 1
-        # 遍历参数张量的每个维度，计算总大小
+    
         for s in list(p.size()):
             nn = nn * s
-        pp += nn  # 累加每个参数张量的总元素数量
+        pp += nn  
     return pp
 def count_params_with_grad(model):
     total_params = 0
