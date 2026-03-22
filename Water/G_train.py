@@ -202,7 +202,7 @@ if __name__ == '__main__':
     save_dir = './Checkpoint/'
     os.makedirs(save_dir, exist_ok=True)
     base_log_dir = ('/root/tf-logs/12_4_A')
-    load_path = "D:\desktop\BCO\checkpoint\water\phi_first_model.pth"
+    load_path = "\phi_first_model.pth"
     current_time = datetime.now().strftime("%m%d_%H%M%S")
     time_based_unique_id = f"{current_time}"
     log_dir = os.path.join(base_log_dir, "Gmodel---" + time_based_unique_id)
