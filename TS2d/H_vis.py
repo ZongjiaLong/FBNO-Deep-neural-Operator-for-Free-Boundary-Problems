@@ -383,7 +383,7 @@ def plot_error_distributions(
 
     # Save first plot
     if save_path:
-        plt.savefig('D:\\desktop\\output861\\vis_folder\\phi1.svg', bbox_inches='tight', transparent=True)
+        plt.savefig('.\\phi1.svg', bbox_inches='tight', transparent=True)
 
     plt.show()
 
@@ -405,7 +405,7 @@ def plot_error_distributions(
 
     # Save second plot
     if save_path:
-        plt.savefig('D:\\desktop\\output861\\vis_folder\\aoe1.svg', bbox_inches='tight', transparent=True)
+        plt.savefig('.\\aoe1.svg', bbox_inches='tight', transparent=True)
 
     plt.show()
 
@@ -534,8 +534,8 @@ if __name__ == '__main__':
     seed = 58
 
     # Define data paths
-    output_file_path = r"D:\desktop\output861\TS_data_normalized.npz"
-    uv_path = r"D:\desktop\output861\TS_A_coord.npy"
+    output_file_path = r".\TS_data_normalized.npz"
+    uv_path = r".\TS_A_coord.npy"
     batchsize = 100
 
     # Create data loaders
@@ -548,8 +548,8 @@ if __name__ == '__main__':
     print(f'Total dataset size: {len(train_loader) * batchsize} samples')
 
     # Define model and save paths
-    model_path = "D:\desktop\BCO\checkpoint\TS_2D\TSHmodel.pth"  # Trained model path
-    save_viz_dir = "D:\desktop\output861\PHI_compare"  # Visualization save directory
+    model_path = ".\TSHmodel.pth"  # Trained model path
+    save_viz_dir = ".\PHI_compare"  # Visualization save directory
 
     # Uncomment the functions you want to run:
 
