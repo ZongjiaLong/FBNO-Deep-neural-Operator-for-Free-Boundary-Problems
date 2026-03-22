@@ -93,7 +93,7 @@ def create_dataloaders(
     """
     dataset = StefanDataset(data_path, max_samples=max_samples if max_samples is not None else 800)
     return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
-# loader = create_dataloaders("D:\\desktop\\stefan_plots\\data\\stefan_data.npy")
+# loader = create_dataloaders(".\\data\\stefan_data.npy")
 # for batch in loader:
 #     test_input = batch.test_input.to(device='cuda')
 #     print(test_input.shape)
