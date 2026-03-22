@@ -1,5 +1,5 @@
-# FBNO-Deep-neural-Operator-for-Free-Boundary-Problems
-This is the code of the Deep neural Operator for Free Boundary Problems
+# FBNO-Deep-Neural-Operator-for-Free-Boundary-Problems
+This is the code of the Deep Neural Operator for Free Boundary Problems
 
 ## Data
 
